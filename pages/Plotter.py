@@ -37,7 +37,6 @@ if len(sub_A) != 0:
     
     st.download_button(
         label="Download Excel template",
-        data=table,
         file_name="Template.xlsx",
         mime="application/vnd.ms-excel")
    
