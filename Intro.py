@@ -5,7 +5,7 @@ st.set_page_config(layout="wide", page_title='Plotternary')
 
 theme = st_theme()
 
- _, container1, _ = st.columns([35, 70, 35])
+_, container1, _ = st.columns([35, 70, 35])
 
 #Adding a Title
 if theme == dark:
