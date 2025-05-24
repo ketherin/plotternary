@@ -15,7 +15,7 @@ else:
   st.sidebar.image("sidebar_dark.png",  use_container_width=True)
   container1.image("dark_logo.png")
 
-st.text(theme)
+st.text("")
 st.text("")
 st.text("")
 
