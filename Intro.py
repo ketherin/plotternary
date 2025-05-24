@@ -5,8 +5,10 @@ st.set_page_config(layout="wide", page_title='Plotternary')
 
 #Adding a Title
 
-st.sidebar.image("light_logo.png",  use_container_width=True)
+st.sidebar.image("sidebar_light.png",  use_container_width=True)
 
+_, container1, _ = st.columns([35, 70, 35])
+container1.image("light_logo.png")
 
 st.text("")
 st.text("")
