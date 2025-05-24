@@ -3,7 +3,7 @@ from streamlit_theme import st_theme
 
 theme = st_theme()
 
-st.set_page_config(layout="wide", page_title=theme)
+st.set_page_config(layout="wide", page_title="Plotternary")
 
 _, container1, _ = st.columns([35, 70, 35])
 
