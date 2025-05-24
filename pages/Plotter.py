@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 import skimage as ski
 import streamlit as st
-import io
+
 
 #Criar Página
 st.set_page_config(page_title='Plotternary',layout='wide')
@@ -27,15 +27,11 @@ if len(sub_A) != 0:
 
     #Df vazio para preencher
     df_vazio = pd.DataFrame(columns = [sub_A, sub_B, sub_C,'Classification'])
-
-    buffer = io.BytesIO()
-
-    #Create a Pandas Excel writer using XlsxWriter as the engine.
-    with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
     
-        df_vazio.to_excel(writer, sheet_name='Template')
-        writer.close()
-
+    #Create a Pandas Excel writer using XlsxWriter as the engine.
+      
+    df_vazio.to_excel(xlsxwriter, sheet_name='Template')
+   
     st.text('Fill the Excel template (Warning: make sure you are using . as your decimal separator)')
     
     st.download_button(
