@@ -31,13 +31,13 @@ if len(sub_A) != 0:
     
     #Create a Pandas Excel writer using XlsxWriter as the engine.
       
-    df_vazio.to_excel('Template.xlsx')
+    table=df_vazio.to_excel('Template.xlsx')
    
     st.text('Fill the Excel template (Warning: make sure you are using . as your decimal separator)')
     
     st.download_button(
         label="Download Excel template",
-        data=buffer,
+        data=table,
         file_name="Template.xlsx",
         mime="application/vnd.ms-excel")
    
