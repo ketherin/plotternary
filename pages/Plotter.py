@@ -20,11 +20,7 @@ if theme['backgroundColor'] == '#0e1117':
 else:
   st.sidebar.image("sidebar_dark.png",  use_container_width=True)
   st.image("dark_logo.png")
-  
-st.sidebar.image("sidebar_light.png",  use_container_width=True)
 
-#Título da Página
-st.image("light_logo.png")
 
 #Input do nome do Óleo e Tensoativo
 dados = st.form(key='my_form')
