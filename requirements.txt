@@ -4,3 +4,4 @@ plotly
 scikit-image
 streamlit
 streamlit_theme
+xlsxwriter
