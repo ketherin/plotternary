@@ -1,9 +1,9 @@
 import streamlit as st
-import streamlit_theme
+from streamlit_theme import st_theme
 
 st.set_page_config(layout="wide", page_title='Plotternary')
 
-theme = streamlit_theme()
+theme = st_theme()
 
 _, container1, _ = st.columns([35, 70, 35])
 
