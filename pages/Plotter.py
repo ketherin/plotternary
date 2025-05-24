@@ -6,11 +6,21 @@ import plotly.figure_factory as ff
 import skimage as ski
 import streamlit as st
 import xlsxwriter
-
+from streamlit_theme import st_theme
 
 #Criar Página
 st.set_page_config(page_title='Plotternary',layout='wide')
 
+theme = st_theme()
+
+if theme['backgroundColor'] == '#0e1117':
+  st.sidebar.image("sidebar_light.png",  use_container_width=True)
+  st.image("light_logo.png")
+  
+else:
+  st.sidebar.image("sidebar_dark.png",  use_container_width=True)
+  st.image("dark_logo.png")
+  
 st.sidebar.image("sidebar_light.png",  use_container_width=True)
 
 #Título da Página
