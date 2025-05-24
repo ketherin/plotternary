@@ -3,12 +3,12 @@ from streamlit_theme import st_theme
 
 st.set_page_config(layout="wide", page_title="Plotternary")
 
-theme = st_theme('backgroundColor')
+theme = st_theme()
 
 _, container1, _ = st.columns([35, 70, 35])
 
 #Adding a Title
-if theme == '#0e1117':
+if theme['backgroundColor'] == '#0e1117':
   st.sidebar.image("sidebar_light.png",  use_container_width=True)
   container1.image("light_logo.png")
   
