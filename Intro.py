@@ -5,16 +5,14 @@ st.set_page_config(layout="wide", page_title='Plotternary')
 
 theme = st_theme()
 
+ _, container1, _ = st.columns([35, 70, 35])
+
 #Adding a Title
 if theme == dark:
   st.sidebar.image("sidebar_light.png",  use_container_width=True)
-  
-  _, container1, _ = st.columns([35, 70, 35])
   container1.image("light_logo.png")
 else:
-    st.sidebar.image("sidebar_dark.png",  use_container_width=True)
-  
-  _, container1, _ = st.columns([35, 70, 35])
+  st.sidebar.image("sidebar_dark.png",  use_container_width=True)
   container1.image("dark_logo.png")
 
 st.text("")
