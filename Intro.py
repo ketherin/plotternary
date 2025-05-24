@@ -3,11 +3,10 @@ from streamlit_theme import st_theme
 
 st.set_page_config(layout="wide", page_title="Plotternary")
 
-theme = st_theme()
-bg_c=theme['backgroundColor']
+theme = st_theme['backgroundColor']
 
 
-if bg_c == '#0e1117':
+if theme == '#0e1117':
   st.sidebar.image("sidebar_light.png",  use_container_width=True)
   st.image("light_logo.png")
   
