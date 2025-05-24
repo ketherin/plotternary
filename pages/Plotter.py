@@ -38,7 +38,6 @@ if len(sub_A) != 0:
     st.download_button(
         label="Download Excel template",
         data='Template.xlsx',
-        file_name="Template.xlsx",
         mime="application/vnd.ms-excel")
    
     st.text('Upload the previously filled Excel template')
