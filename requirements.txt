@@ -1,8 +1,8 @@
+streamlit
+streamlit_theme
 pandas
 numpy
 plotly
 scikit-image
-streamlit
-streamlit_theme
 xlsxwriter
 openpyxl
