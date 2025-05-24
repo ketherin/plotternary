@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 import plotly.figure_factory as ff
 import skimage as ski
 import streamlit as st
+import xlsxwriter
 
 
 #Criar Página
