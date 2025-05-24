@@ -1,0 +1,8 @@
+pandas
+numpy
+plotly.express
+plotly.graph_object
+plotly.figure_factory
+scikit-image
+streamlit
+io
