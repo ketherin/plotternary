@@ -17,7 +17,7 @@ else:
   container1.image("dark_logo.png")
   
 
-st.text(theme)
+st.text("")
 st.text("")
 st.text("")
 
