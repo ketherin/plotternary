@@ -31,7 +31,7 @@ if len(sub_A) != 0:
     
     #Create a Pandas Excel writer using XlsxWriter as the engine.
       
-    df_vazio.to_excel(xlsxwriter, sheet_name='Template')
+    df_vazio.to_excel('Template.xlsx')
    
     st.text('Fill the Excel template (Warning: make sure you are using . as your decimal separator)')
     
