@@ -49,14 +49,14 @@ if len(sub_A) != 0:
     uploaded_file = st.file_uploader("Choose an Excel file")
     
     if uploaded_file is not None:
-
+        
+        fig = go.Figure()
+        
         dataframe=pd.read_excel(uploaded_file)
    
         contorno=st.checkbox('Check this box for region contouring. (Warning: make sure your compositions sum up to 1)')
 
         pontos=st.checkbox('Check this box for scattered dots representing the regions')
-
-        fig = go.Figure()
 
         if pontos == True:    
             
@@ -104,6 +104,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
