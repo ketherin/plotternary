@@ -110,7 +110,7 @@ if len(sub_A) != 0:
                                             dataframe['Code'],
                                             pole_labels=[sub_A,sub_B,sub_C],
                                             interp_mode='ilr',
-                                            colorscale='Portland',
+                                            colorscale='GnBu',
                                             showscale=True)
             fig.update_layout({
                 'ternary':{
@@ -170,6 +170,7 @@ if len(sub_A) != 0:
         st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
