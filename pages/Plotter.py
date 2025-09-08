@@ -13,15 +13,6 @@ from streamlit_theme import st_theme
 #Criar Página
 st.set_page_config(page_title='Plotternary',layout='wide')
 
-theme = st.context.theme.type
-
-if theme== 'light':
-  st.sidebar.image("sidebar_light.png",  use_container_width=True)
-  st.image("light_logo.png")
-  
-else:
-  st.sidebar.image("sidebar_dark.png",  use_container_width=True)
-  st.image("dark_logo.png")
 
 #Input do nome do Óleo e Tensoativo
 dados = st.form(key='my_form')
@@ -116,6 +107,7 @@ if len(sub_A) != 0:
           st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
