@@ -85,7 +85,7 @@ if len(sub_A) != 0:
                     b=df_code[sub_B],
                     c=df_code[sub_C],
                     marker=dict(size=8),
-                    cliponaxis=False
+                    cliponaxis=False,
                     name=codigo))
 
                 #Legenda dos Eixos
@@ -113,6 +113,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
