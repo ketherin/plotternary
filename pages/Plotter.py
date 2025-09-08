@@ -81,9 +81,9 @@ if len(sub_A) != 0:
                 fig.add_trace(
                 go.Scatterternary(
                     mode='markers',
-                    a=df_code[sub_A].astype(float),
-                    b=df_code[sub_B].astype(float),
-                    c=df_code[sub_C].astype(float),
+                    a=df_code[sub_A],
+                    b=df_code[sub_B],
+                    c=df_code[sub_C],
                     marker=dict(size=8),
                     cliponaxis=False,
                     name=codigo))
@@ -113,6 +113,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
