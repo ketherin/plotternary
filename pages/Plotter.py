@@ -17,7 +17,7 @@ if st.context.theme.type == "light":
   st.sidebar.image("sidebar_light.png",  use_container_width=True)
   st.image("light_logo.png")
   
-else:
+if st.context.theme.type == "dark:
   st.sidebar.image("sidebar_dark.png",  use_container_width=True)
   st.image("dark_logo.png")
 
@@ -151,6 +151,7 @@ if len(sub_A) != 0:
         st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
