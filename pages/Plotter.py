@@ -138,19 +138,20 @@ if len(sub_A) != 0:
                     name=codigo))
 
                 #Legenda dos Eixos
-                fig.update_layout({
-                    'ternary':{
-                        'sum':1,
-                        'aaxis':{'title': sub_A, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
-                        'baxis':{'title': sub_B, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
-                        'caxis':{'title': sub_C, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'}}})
+            fig.update_layout({
+                'ternary':{
+                    'sum':1,
+                    'aaxis':{'title': sub_A, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
+                    'baxis':{'title': sub_B, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
+                    'caxis':{'title': sub_C, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'}}})
 
-                fig.update_layout(height=1200, width=1200)
-                fig.update_layout()
+            fig.update_layout(height=1200, width=1200)
+            fig.update_layout()
           
         st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
