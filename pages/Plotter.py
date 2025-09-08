@@ -136,7 +136,17 @@ if len(sub_A) != 0:
                                             interp_mode='ilr',
                                             colorscale='Portland',
                                             showscale=True)
-            fig.add_trace(
+            for i in range(0,len(dataframe['Classification'].unique())):
+                
+                vals=dataframe['Classification'].unique().tolist()
+
+                #Caracterização das Amostras
+                
+                codigo = str(vals[i])
+                
+                df_code = dataframe[dataframe['Classification']==codigo]
+
+                fig.add_trace(
                 go.Scatterternary(
                     mode='markers',
                     a=df_code[sub_A],
@@ -160,6 +170,7 @@ if len(sub_A) != 0:
         st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
