@@ -13,9 +13,7 @@ from streamlit_theme import st_theme
 #Criar Página
 st.set_page_config(page_title='Plotternary',layout='wide')
 
-theme = st.context.theme.type
-
-if theme == 'light':
+if st.context.theme.type == "light":
   st.sidebar.image("sidebar_light.png",  use_container_width=True)
   st.image("light_logo.png")
   
@@ -114,9 +112,46 @@ if len(sub_A) != 0:
                                             interp_mode='ilr',
                                             colorscale='Portland',
                                             showscale=True)
+
+        if pontos and contorno == True:
+    
+            composition=np.transpose(dataframe[[sub_A,sub_B,sub_C]].values)
+      
+            scale_dict={s:i for i, s in enumerate(dataframe['Classification'].unique(), start=0)}
+
+            dataframe['Code'] = dataframe['Classification'].map(scale_dict)
+ 
+            fig = ff.create_ternary_contour(composition,
+                                            dataframe['Code'],
+                                            pole_labels=[sub_A,sub_B,sub_C],
+                                            interp_mode='ilr',
+                                            colorscale='Portland',
+                                            showscale=True)
+            fig.add_trace(
+                go.Scatterternary(
+                    mode='markers',
+                    a=df_code[sub_A],
+                    b=df_code[sub_B],
+                    c=df_code[sub_C],
+                    marker=dict(size=8),
+                    cliponaxis=False,
+                    name=codigo))
+
+                #Legenda dos Eixos
+                fig.update_layout({
+                    'ternary':{
+                        'sum':1,
+                        'aaxis':{'title': sub_A, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
+                        'baxis':{'title': sub_B, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
+                        'caxis':{'title': sub_C, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'}}})
+
+                fig.update_layout(height=1200, width=1200)
+                fig.update_layout()
+          
         st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
