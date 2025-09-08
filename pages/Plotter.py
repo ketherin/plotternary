@@ -15,6 +15,14 @@ st.set_page_config(page_title='Plotternary',layout='wide')
 
 theme = st_theme()
 
+if theme['backgroundColor'] == '#0e1117':
+  st.sidebar.image("sidebar_light.png",  use_container_width=True)
+  st.image("light_logo.png")
+  
+else:
+  st.sidebar.image("sidebar_dark.png",  use_container_width=True)
+  st.image("dark_logo.png")
+
 #Input do nome do Óleo e Tensoativo
 dados = st.form(key='my_form')
 sub_A=str(dados.text_input('Enter the name of Substance A:'))
@@ -105,6 +113,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
