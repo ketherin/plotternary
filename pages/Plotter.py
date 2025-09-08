@@ -90,7 +90,7 @@ if len(sub_A) != 0:
                 fig.update_layout(height=1200, width=1200)
                 fig.update_layout()
         
-          if contorno == True:
+           if contorno == True:
 
             composition=np.transpose(dataframe[[sub_A,sub_B,sub_C]].values)
       
@@ -104,9 +104,10 @@ if len(sub_A) != 0:
                                             interp_mode='ilr',
                                             colorscale='Portland',
                                             showscale=True)
-          st.plotly_chart(fig, use_container_width=True)
+           st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
