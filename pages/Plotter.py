@@ -39,7 +39,7 @@ if len(sub_A) != 0:
 
     with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
     # Write each dataframe to a different worksheet.
-    df_vazio.to_excel(writer, sheet_name='Sheet1', index=False)
+      df_vazio.to_excel(writer, sheet_name='Sheet1', index=False)
    
     st.text('Fill the Excel template (Warning: make sure you are using . as your decimal separator)')
     
@@ -108,6 +108,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
