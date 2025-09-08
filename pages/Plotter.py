@@ -57,7 +57,7 @@ if len(sub_A) != 0:
 
         pontos=st.checkbox('Check this box for scattered dots representing the regions')
 
-        if pontos == True:    
+        if pontos == True:
             
             for i in range(0,len(dataframe['Classification'].unique())):
                 
@@ -90,8 +90,8 @@ if len(sub_A) != 0:
                 fig.update_layout(height=1200, width=1200)
                 fig.update_layout()
         
-           if contorno == True:
-
+        if contorno == True:
+    
             composition=np.transpose(dataframe[[sub_A,sub_B,sub_C]].values)
       
             scale_dict={s:i for i, s in enumerate(dataframe['Classification'].unique(), start=0)}
@@ -104,9 +104,10 @@ if len(sub_A) != 0:
                                             interp_mode='ilr',
                                             colorscale='Portland',
                                             showscale=True)
-           st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
