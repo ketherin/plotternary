@@ -43,7 +43,7 @@ if len(sub_A) != 0:
     
     st.download_button(
         label="Download Excel template",
-        data=df_vazio.to_excel('Template.xlsx', index=False),
+        data='Template.xlsx',
         mime="application/vnd.ms-excel")
    
     st.text('Upload the previously filled Excel template')
@@ -105,5 +105,6 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
