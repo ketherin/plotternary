@@ -77,15 +77,16 @@ if len(sub_A) != 0:
                     b=df_code[sub_B],
                     c=df_code[sub_C],
                     marker=dict(size=8),
+                    cliponaxis=False
                     name=codigo))
 
                 #Legenda dos Eixos
                 fig.update_layout({
                     'ternary':{
                         'sum':1,
-                        'aaxis':{'title': sub_A, 'min': 0.01, 'linewidth':2, 'ticks':'outside' },
-                        'baxis':{'title': sub_B, 'min': 0.01, 'linewidth':2, 'ticks':'outside' },
-                        'caxis':{'title': sub_C, 'min': 0.01, 'linewidth':2, 'ticks':'outside' }}})
+                        'aaxis':{'title': sub_A, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
+                        'baxis':{'title': sub_B, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
+                        'caxis':{'title': sub_C, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'}}})
 
                 fig.update_layout(height=1200, width=1200)
                 fig.update_layout()
@@ -104,6 +105,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
