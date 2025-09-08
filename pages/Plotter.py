@@ -62,7 +62,7 @@ if len(sub_A) != 0:
             
             for i in range(0,len(dataframe['Classification'].unique())):
                 
-                vals=dataframe['Classification'].unique()
+                vals=[dataframe['Classification'].unique()]
 
                 #Caracterização das Amostras
                 
@@ -93,7 +93,8 @@ if len(sub_A) != 0:
         if contorno == True:
 
             composition=np.transpose(dataframe[[sub_A,sub_B,sub_C]].values)
-            scale=dataframe['Classification'].values
+            scale=len(dataframe['Classification'].unique()]
+            
  
             fig = ff.create_ternary_contour(composition,
                                             scale,
