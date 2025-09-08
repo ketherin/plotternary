@@ -36,14 +36,17 @@ if len(sub_A) != 0:
     df_vazio = pd.DataFrame(columns = [sub_A, sub_B, sub_C,'Classification'])
     
     #Create a Pandas Excel writer using XlsxWriter as the engine.
-      
-    table=df_vazio.to_excel('Template.xlsx', index=False)
+
+    with pd.ExcelWriter(buffer, engine='xlsxwriter') as writer:
+    # Write each dataframe to a different worksheet.
+    df_vazio.to_excel(writer, sheet_name='Sheet1', index=False)
    
     st.text('Fill the Excel template (Warning: make sure you are using . as your decimal separator)')
     
     st.download_button(
         label="Download Excel template",
-        data='Template.xlsx',
+        data=buffer,
+        file_name='Template.xlsx',
         mime="application/vnd.ms-excel")
    
     st.text('Upload the previously filled Excel template')
@@ -105,6 +108,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
