@@ -110,7 +110,7 @@ if len(sub_A) != 0:
                                             dataframe['Code'],
                                             pole_labels=[sub_A,sub_B,sub_C],
                                             interp_mode='ilr',
-                                            colorscale='Jet',
+                                            colorscale='Rainbow',
                                             showscale=True)
             fig.update_layout({
                 'ternary':{
@@ -134,7 +134,7 @@ if len(sub_A) != 0:
                                             dataframe['Code'],
                                             pole_labels=[sub_A,sub_B,sub_C],
                                             interp_mode='ilr',
-                                            colorscale='Jet',
+                                            colorscale='Rainbow',
                                             showscale=True)
             for i in range(0,len(dataframe['Classification'].unique())):
                 
@@ -170,6 +170,7 @@ if len(sub_A) != 0:
         st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
