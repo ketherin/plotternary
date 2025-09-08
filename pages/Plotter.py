@@ -93,7 +93,7 @@ if len(sub_A) != 0:
         if contorno == True:
 
             composition=np.transpose(dataframe[[sub_A,sub_B,sub_C]].values)
-            scale=len(dataframe['Classification'].unique())
+            scale=range(0,len(dataframe['Classification'].unique()))
             
  
             fig = ff.create_ternary_contour(composition,
@@ -104,6 +104,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
