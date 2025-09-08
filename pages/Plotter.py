@@ -112,6 +112,15 @@ if len(sub_A) != 0:
                                             interp_mode='ilr',
                                             colorscale='Portland',
                                             showscale=True)
+            fig.update_layout({
+                'ternary':{
+                    'sum':1,
+                    'aaxis':{'title': sub_A, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
+                    'baxis':{'title': sub_B, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'},
+                    'caxis':{'title': sub_C, 'min': 0.0, 'linewidth':2, 'ticks':'','layer':'below traces'}}})
+
+            fig.update_layout(height=1200, width=1200)
+            fig.update_layout()
 
         if pontos and contorno == True:
     
@@ -151,6 +160,7 @@ if len(sub_A) != 0:
         st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
