@@ -62,7 +62,7 @@ if len(sub_A) != 0:
             
             for i in range(0,len(dataframe['Classification'].unique())):
                 
-                vals=[dataframe['Classification'].unique()]
+                vals=dataframe['Classification'].unique().to_list()
 
                 #Caracterização das Amostras
                 
@@ -104,6 +104,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
