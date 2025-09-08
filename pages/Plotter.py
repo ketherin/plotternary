@@ -113,9 +113,10 @@ if len(sub_A) != 0:
                                             interp_mode='ilr',
                                             colorscale='Portland',
                                             showscale=True)
-        
           st.plotly_chart(fig, use_container_width=True)
+        
                 
+
 
 
 
