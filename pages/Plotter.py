@@ -52,17 +52,17 @@ if len(sub_A) != 0:
 
         dataframe=pd.read_excel(uploaded_file)
    
-        fig = go.Figure()
-
         contorno=st.checkbox('Check this box for region contouring. (Warning: make sure your compositions sum up to 1)')
 
         pontos=st.checkbox('Check this box for scattered dots representing the regions')
+
+        fig = go.Figure()
 
         if pontos == True:    
             
             for i in range(0,len(dataframe['Classification'].unique())):
                 
-                vals=dataframe['Classification'].unique().to_list()
+                vals=dataframe['Classification'].unique().tolist()
 
                 #Caracterização das Amostras
                 
@@ -104,6 +104,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
