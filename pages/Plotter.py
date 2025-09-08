@@ -1,5 +1,6 @@
 import pandas as pd
 from pandas import ExcelWriter
+import io
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
@@ -24,6 +25,8 @@ submit_button = dados.form_submit_button(label='Submit')
 #Gerar dataframe vazio para download após preenchimento dos nomes 
 if len(sub_A) != 0:
 
+    buffer = io.BytesIO()
+    
     #Df vazio para preencher
     df_vazio = pd.DataFrame(columns = [sub_A, sub_B, sub_C,'Classification'])
     
@@ -100,6 +103,7 @@ if len(sub_A) != 0:
                                             showscale=True)
         
         st.plotly_chart(fig, use_container_width=True)
+
 
 
 
