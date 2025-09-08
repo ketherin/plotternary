@@ -67,15 +67,15 @@ if len(sub_A) != 0:
 
         if pontos == True:
             
-            for i in range(0,len(dataframe['Classification'].unique())):
+            for i in range(0,len(dataframe['Classification - use words or letters'].unique())):
                 
-                vals=dataframe['Classification'].unique().tolist()
+                vals=dataframe['Classification - use words or letters'].unique().tolist()
 
                 #Caracterização das Amostras
                 
                 codigo = str(vals[i])
                 
-                df_code = dataframe[dataframe['Classification']==codigo]
+                df_code = dataframe[dataframe['Classification - use words or letters']==codigo]
 
                 fig.add_trace(
                 go.Scatterternary(
@@ -102,9 +102,9 @@ if len(sub_A) != 0:
     
             composition=np.transpose(dataframe[[sub_A,sub_B,sub_C]].values)
       
-            scale_dict={s:i for i, s in enumerate(dataframe['Classification'].unique(), start=0)}
+            scale_dict={s:i for i, s in enumerate(dataframe['Classification - use words or letters'].unique(), start=0)}
 
-            dataframe['Code'] = dataframe['Classification'].map(scale_dict)
+            dataframe['Code'] = dataframe['Classification - use words or letters'].map(scale_dict)
  
             fig = ff.create_ternary_contour(composition,
                                             dataframe['Code'],
@@ -126,9 +126,9 @@ if len(sub_A) != 0:
     
             composition=np.transpose(dataframe[[sub_A,sub_B,sub_C]].values)
       
-            scale_dict={s:i for i, s in enumerate(dataframe['Classification'].unique(), start=0)}
+            scale_dict={s:i for i, s in enumerate(dataframe['Classification - use words or letters'].unique(), start=0)}
 
-            dataframe['Code'] = dataframe['Classification'].map(scale_dict)
+            dataframe['Code'] = dataframe['Classification - use words or letters'].map(scale_dict)
  
             fig = ff.create_ternary_contour(composition,
                                             dataframe['Code'],
@@ -138,13 +138,13 @@ if len(sub_A) != 0:
                                             showscale=True)
             for i in range(0,len(dataframe['Classification'].unique())):
                 
-                vals=dataframe['Classification'].unique().tolist()
+                vals=dataframe['Classification - use words or letters'].unique().tolist()
 
                 #Caracterização das Amostras
                 
                 codigo = str(vals[i])
                 
-                df_code = dataframe[dataframe['Classification']==codigo]
+                df_code = dataframe[dataframe['Classification - use words or letters']==codigo]
 
                 fig.add_trace(
                 go.Scatterternary(
@@ -170,6 +170,7 @@ if len(sub_A) != 0:
         st.plotly_chart(fig, use_container_width=True)
         
                 
+
 
 
 
